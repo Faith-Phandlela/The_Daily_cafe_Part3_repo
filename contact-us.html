@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://unpkg.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://unpkg.com; font-src https://fonts.gstatic.com; img-src 'self' data: https://tile.openstreetmap.org https://unpkg.com; connect-src https://jsonplaceholder.typicode.com; media-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self' mailto:">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+    <title>Contact Us | The Daily Cafe - Phone, Email & Map</title>
+    <meta name="description" content="Contact The Daily Cafe by phone, email or the online message form, and find our location on the interactive map.">
+    <meta name="author" content="Faith Phandlela">
+    <meta name="theme-color" content="#1c1815">
+    <link rel="canonical" href="https://www.thedailycafe.co.za/contact-us.html">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="The Daily Cafe">
+    <meta property="og:title" content="Contact Us | The Daily Cafe - Phone, Email & Map">
+    <meta property="og:description" content="Contact The Daily Cafe by phone, email or the online message form, and find our location on the interactive map.">
+    <meta property="og:url" content="https://www.thedailycafe.co.za/contact-us.html">
+    <meta property="og:image" content="https://www.thedailycafe.co.za/IMAGES/coffee.jpg">
+    <link rel="icon" href="IMAGES/logo.png" type="image/png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="CSS/styles.css">
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">
+</head>
+<body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header">
+        <div class="masthead">
+            <img class="logo" src="IMAGES/logo.png" width="56" height="56" alt="The Daily Cafe logo">
+            <div class="masthead-text">
+                <span class="masthead-title">The Daily Cafe</span>
+                <span class="masthead-tagline">A cozy cafe in town</span>
+            </div>
+        </div>
+        <button class="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="site-nav">
+            <span></span><span></span><span></span>
+        </button>
+        <nav class="site-nav" id="site-nav" aria-label="Main">
+            <a href="home.html">Home</a>
+            <a href="about-us.html">About us</a>
+            <a href="services.html">Services</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="contact-us.html" aria-current="page">Contact us</a>
+            <a href="enquiry.html">Enquiry</a>
+        </nav>
+    </header>
+
+    <main id="main">
+        <div class="page-intro">
+            <h1>Get in touch</h1>
+            <p>For more information, contact us, send a message below, or find us on the map.</p>
+        </div>
+        <div class="contact-layout">
+            <div class="contact-card">
+                <ul>
+                    <li><a href="tel:+27637795901">(+27) 63 779 5901</a></li>
+                    <li><a href="mailto:thedailycafe@gmail.com">thedailycafe@gmail.com</a></li>
+                </ul>
+            </div>
+            <form class="enquiry-form" id="contact-form" novalidate>
+                <h2>Send us a message</h2>
+                <div class="form-group"><label for="c-name">Full name <span class="required">*</span></label><input type="text" id="c-name" name="name" required autocomplete="name"></div>
+                <div class="form-group"><label for="c-email">Email address <span class="required">*</span></label><input type="email" id="c-email" name="email" required autocomplete="email"></div>
+                <div class="form-group"><label for="c-phone">Phone number</label><input type="tel" id="c-phone" name="phone" autocomplete="tel"></div>
+                <div class="form-group"><label for="c-reason">Type of message</label>
+                    <select id="c-reason" name="reason"><option>General question</option><option>Compliment</option><option>Complaint</option><option>Other</option></select></div>
+                <div class="form-group"><label for="c-message">Message <span class="required">*</span></label><textarea id="c-message" name="message" required></textarea></div>
+                <button type="submit" class="btn-submit">Prepare email</button>
+                <div class="form-success" tabindex="-1" role="status"></div>
+            </form>
+        </div>
+        <h2 class="map-title">Find us</h2>
+        <div id="map" class="map" role="region" aria-label="Map showing The Daily Cafe location"></div>
+    </main>
+
+    <footer class="site-footer">&copy; ST10527760 &middot; The Daily Cafe</footer>
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+    <script src="JAVA SCRIPT/main.js" defer></script>
+</body>
+</html>

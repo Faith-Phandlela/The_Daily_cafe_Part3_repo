@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://unpkg.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://unpkg.com; font-src https://fonts.gstatic.com; img-src 'self' data: https://tile.openstreetmap.org https://unpkg.com; connect-src https://jsonplaceholder.typicode.com; media-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self' mailto:">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+    <title>Menu & Services | The Daily Cafe - Coffee, Meals, Bakes</title>
+    <meta name="description" content="Browse The Daily Cafe menu: espresso coffee, cold drinks, light meals and fresh bakes, plus dine-in, takeaway, free Wi-Fi and vegan or gluten-free options.">
+    <meta name="author" content="Faith Phandlela">
+    <meta name="theme-color" content="#1c1815">
+    <link rel="canonical" href="https://www.thedailycafe.co.za/services.html">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="The Daily Cafe">
+    <meta property="og:title" content="Menu & Services | The Daily Cafe - Coffee, Meals, Bakes">
+    <meta property="og:description" content="Browse The Daily Cafe menu: espresso coffee, cold drinks, light meals and fresh bakes, plus dine-in, takeaway, free Wi-Fi and vegan or gluten-free options.">
+    <meta property="og:url" content="https://www.thedailycafe.co.za/services.html">
+    <meta property="og:image" content="https://www.thedailycafe.co.za/IMAGES/coffee.jpg">
+    <link rel="icon" href="IMAGES/logo.png" type="image/png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="CSS/styles.css">
+</head>
+<body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header">
+        <div class="masthead">
+            <img class="logo" src="IMAGES/logo.png" width="56" height="56" alt="The Daily Cafe logo">
+            <div class="masthead-text">
+                <span class="masthead-title">The Daily Cafe</span>
+                <span class="masthead-tagline">A cozy cafe in town</span>
+            </div>
+        </div>
+        <button class="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="site-nav">
+            <span></span><span></span><span></span>
+        </button>
+        <nav class="site-nav" id="site-nav" aria-label="Main">
+            <a href="home.html">Home</a>
+            <a href="about-us.html">About us</a>
+            <a href="services.html" aria-current="page">Services</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="contact-us.html">Contact us</a>
+            <a href="enquiry.html">Enquiry</a>
+        </nav>
+    </header>
+
+    <main id="main">
+        <div class="page-intro">
+            <h1>Services</h1>
+        </div>
+
+        <div class="service-grid">
+            <div class="service-card reveal">
+                <h2>Beverages and food</h2>
+                <ul>
+                    <li>Coffee and espresso-based drinks (cappuccino, latte, flat white, americano)</li>
+                    <li>Tea selection</li>
+                    <li>Cold drinks (smoothies, fresh juices, iced coffee)</li>
+                    <li>Light meals (sandwiches, wraps, toasties, salads)</li>
+                    <li>Baked goods (pastries, muffins, cakes, cookies)</li>
+                    <li>Vegetarian/vegan and gluten-free options</li>
+                </ul>
+            </div>
+
+            <div class="service-card reveal">
+                <h2>Convenience services</h2>
+                <ul>
+                    <li>Dine-in seating</li>
+                    <li>Takeaway/grab-and-go</li>
+                    <li>Free Wi-Fi for customers</li>
+                    <li>Loyalty or rewards programs (e.g., stamp cards)</li>
+                    <li>Seasonal or specialty menu items</li>
+                </ul>
+            </div>
+        </div>
+    
+        <section class="menu-section" aria-labelledby="menu-h">
+            <h2 id="menu-h">Our menu</h2>
+            <div class="menu-tools">
+                <div id="menu-tabs" class="tabs" role="tablist" aria-label="Menu categories"></div>
+                <label class="sr-only" for="menu-search">Search the menu</label>
+                <input type="search" id="menu-search" placeholder="Search the menu (e.g. latte, vegan)">
+                <label class="sr-only" for="menu-sort">Sort menu</label>
+                <select id="menu-sort"><option value="name">Sort: A to Z</option><option value="low">Price: low to high</option><option value="high">Price: high to low</option></select>
+            </div>
+            <p id="menu-count" class="menu-count" aria-live="polite"></p>
+            <div id="menu-list" class="menu-grid"><noscript><p>Please enable JavaScript to view the menu.</p></noscript></div>
+        </section>
+
+        <section class="faq reveal" aria-labelledby="faq-h">
+            <h2 id="faq-h">Frequently asked questions</h2>
+            <div class="accordion">
+                <div class="acc-item"><h3><button class="acc-btn" type="button" aria-expanded="false" aria-controls="faq0">Do you offer vegan and gluten-free options?</button></h3>
+                <div class="acc-panel" id="faq0" hidden><p>Yes. Items marked vegan or gluten-free on the menu above are prepared with those diets in mind. Please tell us about any allergies when you order.</p></div></div>
+                <div class="acc-item"><h3><button class="acc-btn" type="button" aria-expanded="false" aria-controls="faq1">Can I book the cafe for an event?</button></h3>
+                <div class="acc-panel" id="faq1" hidden><p>Yes, we cater for groups of 10 or more. Use the <a href="enquiry.html">enquiry form</a> to get an instant cost estimate and check availability.</p></div></div>
+                <div class="acc-item"><h3><button class="acc-btn" type="button" aria-expanded="false" aria-controls="faq2">Is there free Wi-Fi?</button></h3>
+                <div class="acc-panel" id="faq2" hidden><p>Yes, free Wi-Fi is available to all customers - ask at the counter for the password.</p></div></div>
+                <div class="acc-item"><h3><button class="acc-btn" type="button" aria-expanded="false" aria-controls="faq3">Do you have a loyalty programme?</button></h3>
+                <div class="acc-panel" id="faq3" hidden><p>Yes, ask for a stamp card on your next visit and collect stamps towards a free coffee.</p></div></div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">&copy; ST10527760 &middot; The Daily Cafe</footer>
+    <script src="JAVA SCRIPT/main.js" defer></script>
+</body>
+</html>
