@@ -7,7 +7,7 @@
   var el = function (tag, cls, txt) {
     var e = document.createElement(tag);
     if (cls) e.className = cls;
-    if (txt != null) e.textContent = txt; // textContent (never innerHTML) keeps user/data text safe from XSS
+    if (txt != null) e.textContent = txt; 
     return e;
   };
 
@@ -27,7 +27,7 @@
   }, { threshold: 0.15 }) : null;
   $$('.reveal').forEach(function (n) { io ? io.observe(n) : n.classList.add('in'); });
 
-  /* ---------- 3. "Open now" badge (DOM manipulation) - edit HOURS to match the real cafe ---------- */
+  /* ---------- 3. "Open now" badge (DOM manipulation) ---------- */
   var badge = $('#open-status');
   if (badge) {
     var HOURS = { 0: null, 1: [7, 17], 2: [7, 17], 3: [7, 17], 4: [7, 17], 5: [7, 17], 6: [8, 15] };
@@ -141,7 +141,7 @@
     });
   }
 
-  /* ---------- 7. Interactive map (Leaflet + OpenStreetMap) - replace COORDS with the cafe's real location ---------- */
+  /* ---------- 7. Interactive map (Leaflet + OpenStreetMap) ---------- */
   var mapEl = $('#map');
   if (mapEl) {
     if (window.L) {

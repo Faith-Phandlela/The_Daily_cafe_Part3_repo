@@ -64,6 +64,23 @@
     </main>
 
     <footer class="site-footer">&copy; ST10527760 &middot; The Daily Cafe</footer>
-    <script src="JAVA SCRIPT/main.js" defer></script>
+    <script src="JAVA SCRIPT/main.js" defer>
+        //date and time update
+        function updateDateTime(){
+            const now=new Date();
+            const options= {
+                weekday: 'long',
+                year:'numeric',
+                month: 'long',
+                day: 'numeric',
+                hour:'2-digit',
+                minute:'2-digit',
+                second: '2-digit'
+            };
+            document.getElementById('datetime').textContent=now.toLocaleDateString('en-us',options);
+        }
+        updateDateTime();
+        setInterval(updateDateTime, 1000);
+    </script>
 </body>
 </html>
