@@ -59,3 +59,6 @@ New Enquiry page: a full form (name, email, phone, enquiry type, message) with a
 - Forms: client-side validation, error messages and AJAX submission on the Enquiry and Contact pages
 - SEO: unique titles/descriptions, canonical + Open Graph tags, structured data, `robots.txt`, `sitemap.xml`, clean file and image names
 - Performance and security: compressed images, lazy loading, deferred script, Content-Security-Policy
+
+netlify limk
+https://silly-taffy-01d789.netlify.app/
