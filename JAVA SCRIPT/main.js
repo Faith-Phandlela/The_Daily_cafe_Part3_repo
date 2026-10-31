@@ -244,4 +244,22 @@
       showMsg(con, 'Thanks ' + d.name.split(' ')[0] + '! Your message is ready. Click below to send it from your email app.', false, a);
     });
   }
-})();
+})(jQuery);
+//live date and time updater
+function updateDateTime(){
+  const el=document.getElementById('datetime');
+  if(!el)return;
+  const options={
+     weekday: 'long',
+                year:'numeric',
+                month: 'long',
+                day: 'numeric',
+                hour:'2-digit',
+                minute:'2-digit',
+                second: '2-digit'
+  };
+  el.textContent=new Date().toLocaleString('en-us',options);
+
+}
+updateDateTime();
+setInterval(updateDateTime, 1000);
